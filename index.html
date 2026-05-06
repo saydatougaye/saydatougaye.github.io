@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio de Sayda</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color:#f4f4f4;
+            margin:0;
+            padding:0;
+        }
+
+        header{
+            background:#0d1b2a;
+            color:white;
+            text-align:center;
+            padding:40px;
+        }
+
+        h1{
+            margin:0;
+        }
+
+        .projects{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+            padding:40px;
+        }
+
+        .card{
+            background:white;
+            width:250px;
+            border-radius:15px;
+            padding:20px;
+            text-align:center;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .card img{
+            width:100%;
+            border-radius:10px;
+        }
+
+        .card h2{
+            color:#0d1b2a;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Portfolio de Sayda</h1>
+    <p>Étudiante en cybersécurité et réseau</p>
+</header>
+
+<section class="projects">
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/GLPI_logo-color.png">
+        <h2>GLPI</h2>
+        <p>Gestion du parc informatique</p>
+    </div>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Pfsense_logo.png">
+        <h2>PfSense</h2>
+        <p>Configuration firewall et VPN</p>
+    </div>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_Active_Directory_logo.png">
+        <h2>Active Directory</h2>
+        <p>Gestion des utilisateurs et groupes</p>
+    </div>
+
+</section>
+
+</body>
+</html>
