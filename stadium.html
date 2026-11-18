@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StadiumCompany - VLAN, VTP et routage inter-VLAN</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #222; }
+  h1, h2 { color: #1a3c6e; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #999; padding: 6px 10px; text-align: left; font-size: 14px; }
+  th { background: #1a3c6e; color: white; }
+  img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
+  pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<p><a href="index.html">&larr; Retour au portfolio</a></p>
+
+<h1>StadiumCompany : VLAN, VTP et routage inter-VLAN</h1>
+
+<h2>1. Contexte</h2>
+<p>StadiumCompany gère un grand stade (site 1) et deux sites distants : une billetterie (site 2) et un magasin de souvenirs (site 3). Son réseau a grandi sans plan d'ensemble, ce qui crée des problèmes de bande passante et de gestion du trafic. L'objectif est de segmenter le réseau en 7 VLAN (un par service), de gérer ces VLAN avec le protocole VTP, puis de permettre leur communication grâce au routage inter-VLAN.</p>
+
+<h2>2. Plan d'adressage</h2>
+<table>
+<tr><th>Groupe</th><th>VLAN</th><th>Réseau</th><th>Masque</th><th>Plage utilisable</th><th>Broadcast</th></tr>
+<tr><td>Administration</td><td>10</td><td>172.20.0.0/24</td><td>255.255.255.0</td><td>172.20.0.1 - 172.20.0.254</td><td>172.20.0.255</td></tr>
+<tr><td>Équipes</td><td>20</td><td>172.20.1.0/24</td><td>255.255.255.0</td><td>172.20.1.1 - 172.20.1.254</td><td>172.20.1.255</td></tr>
+<tr><td>WiFi</td><td>30</td><td>172.20.2.0/25</td><td>255.255.255.128</td><td>172.20.2.1 - 172.20.2.126</td><td>172.20.2.127</td></tr>
+<tr><td>Caméras IP</td><td>40</td><td>172.20.2.128/26</td><td>255.255.255.192</td><td>172.20.2.129 - 172.20.2.190</td><td>172.20.2.191</td></tr>
+<tr><td>VIP - Presse</td><td>50</td><td>172.20.2.192/27</td><td>255.255.255.224</td><td>172.20.2.193 - 172.20.2.222</td><td>172.20.2.223</td></tr>
+<tr><td>Fournisseurs</td><td>60</td><td>172.20.2.224/28</td><td>255.255.255.240</td><td>172.20.2.225 - 172.20.2.238</td><td>172.20.2.239</td></tr>
+<tr><td>Restaurant</td><td>70</td><td>172.20.2.240/28</td><td>255.255.255.240</td><td>172.20.2.241 - 172.20.2.254</td><td>172.20.2.255</td></tr>
+</table>
+
+<h2>3. Commutation (VTP, VLAN, ports)</h2>
+<p><em>À compléter : schéma, configuration du VTP, création des VLAN, attribution des ports.</em></p>
+
+<h2>4. Routage inter-VLAN</h2>
+<p><em>À compléter : sous-interfaces du routeur et tests de ping.</em></p>
+
+<h2>5. Routage statique entre les sites</h2>
+<p><em>À compléter.</em></p>
+</body>
+</html>
